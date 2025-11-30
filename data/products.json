@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "nombre": "The Legend of Zelda: Tears of the Kingdom",
+    "imagen": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000063713/58fa7ea74c74c47dc7ec0dee0e03fd80f5ae3c78e77bf07adbf00e0a89f0bc15",
+    "precio": 69.99,
+    "categoria": "Nintendo"
+  },
+  {
+    "id": 2,
+    "nombre": "Mario Kart 8 Deluxe",
+    "imagen": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000153/de697f487a36d802dd9a5ff0341f717c8486221b6f5102d2e1463e6c2a5e8a35",
+    "precio": 59.99,
+    "categoria": "Nintendo"
+  },
+  {
+    "id": 3,
+    "nombre": "Super Mario Odyssey",
+    "imagen": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000001130/c42553b4fd0312c31e70ec7468c6c9bccd739f340152925b9600631f2d29f8b5",
+    "precio": 59.99,
+    "categoria": "Nintendo"
+  },
+  {
+    "id": 4,
+    "nombre": "Animal Crossing: New Horizons",
+    "imagen": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000027619/9989957eae3a6b545194c42fec2071675c34aadacd65e6b33fdfe7b3b6a86c3a",
+    "precio": 59.99,
+    "categoria": "Nintendo"
+  },
+  {
+    "id": 5,
+    "nombre": "Splatoon 3",
+    "imagen": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000049311/c1553b7c4b2c35ea5f3d9e23d35f1bbb73f4a7e7c8bb01e7f7b60f9d14f2a14e",
+    "precio": 59.99,
+    "categoria": "Nintendo"
+  },
+  {
+    "id": 6,
+    "nombre": "Pokemon Scarlet",
+    "imagen": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000055731/822c3e7e5304d7e9fff4191df59e36e82c50dd42abf01971a7c17c1b0c4c8e4b",
+    "precio": 59.99,
+    "categoria": "Nintendo"
+  },
+  {
+    "id": 7,
+    "nombre": "God of War Ragnarök",
+    "imagen": "https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/4xJ8XB3bi888QTLZYdl7Oi0s.png",
+    "precio": 69.99,
+    "categoria": "Play"
+  },
+  {
+    "id": 8,
+    "nombre": "Spider-Man: Miles Morales",
+    "imagen": "https://image.api.playstation.com/vulcan/ap/rnd/202008/1020/T45iRIPvw2T5DHXg1B5PqnjU.png",
+    "precio": 49.99,
+    "categoria": "Play"
+  },
+  {
+    "id": 9,
+    "nombre": "Horizon Forbidden West",
+    "imagen": "https://image.api.playstation.com/vulcan/ap/rnd/202107/3100/3jiwszkHJOwYR2dQVxwwj2sB.png",
+    "precio": 69.99,
+    "categoria": "Play"
+  },
+  {
+    "id": 10,
+    "nombre": "The Last of Us Part II",
+    "imagen": "https://image.api.playstation.com/vulcan/img/rnd/202010/2618/Y02ljdBodKFBiziorYgqftLE.png",
+    "precio": 39.99,
+    "categoria": "Play"
+  },
+  {
+    "id": 11,
+    "nombre": "Ratchet & Clank: Rift Apart",
+    "imagen": "https://image.api.playstation.com/vulcan/ap/rnd/202101/2921/DwVNexWFrdFWCZv60IPHBhZa.png",
+    "precio": 69.99,
+    "categoria": "Play"
+  },
+  {
+    "id": 12,
+    "nombre": "Ghost of Tsushima",
+    "imagen": "https://image.api.playstation.com/vulcan/img/rnd/202010/0823/NfaXQIxTwIZnpFiNxwdyPjS5.png",
+    "precio": 59.99,
+    "categoria": "Play"
+  },
+  {
+    "id": 13,
+    "nombre": "Halo Infinite",
+    "imagen": "https://cdn.cloudflare.steamstatic.com/steam/apps/1240440/header.jpg",
+    "precio": 59.99,
+    "categoria": "Xbox"
+  },
+  {
+    "id": 14,
+    "nombre": "Forza Horizon 5",
+    "imagen": "https://cdn.cloudflare.steamstatic.com/steam/apps/1551360/header.jpg",
+    "precio": 59.99,
+    "categoria": "Xbox"
+  },
+  {
+    "id": 15,
+    "nombre": "Gears 5",
+    "imagen": "https://cdn.cloudflare.steamstatic.com/steam/apps/1097840/header.jpg",
+    "precio": 39.99,
+    "categoria": "Xbox"
+  },
+  {
+    "id": 16,
+    "nombre": "Sea of Thieves",
+    "imagen": "https://cdn.cloudflare.steamstatic.com/steam/apps/1172620/header.jpg",
+    "precio": 39.99,
+    "categoria": "Xbox"
+  },
+  {
+    "id": 17,
+    "nombre": "Microsoft Flight Simulator",
+    "imagen": "https://cdn.cloudflare.steamstatic.com/steam/apps/1250410/header.jpg",
+    "precio": 59.99,
+    "categoria": "Xbox"
+  },
+  {
+    "id": 18,
+    "nombre": "Starfield",
+    "imagen": "https://cdn.cloudflare.steamstatic.com/steam/apps/1716740/header.jpg",
+    "precio": 69.99,
+    "categoria": "Xbox"
+  }
+]
