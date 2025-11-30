@@ -47,7 +47,7 @@
     =================================== -->
     <header>
         <div class="logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="src/img/Recurso 1.png" alt="SmithJaggerGames Logo" id="logotipo">
             </a>
         </div>
@@ -144,9 +144,39 @@
             </div>
             
             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-                <div class="row container-items p-5" id="nintendo-products">
-                    <div class="loading-spinner">Cargando productos...</div>
-                </div>
+                <?php
+                include('./src/php/connection.php');
+
+                $responseMySql = mysqli_query($connection, 'select * from products where categoria = "Nintendo" limit 6');
+
+                if (!$responseMySql) {
+                    die(mysqli_error($connection));
+                }
+                
+                echo '<div class="row container-items p-5">';
+
+                if (mysqli_num_rows($responseMySql) > 0) {
+                    while ($rowData = mysqli_fetch_array($responseMySql)) {
+                        $price = floatval($rowData['precio']);
+                        if (!is_numeric($price)) {
+                            $price = 0;
+                        }
+
+                        echo '<div class="col-4 card juego">' .
+                            '<img style="width: 111%;height: 250px;border-radius: 1%;" src="' . htmlspecialchars($rowData['imagen']) . '" alt="' . htmlspecialchars($rowData['nombre']) . '">' .
+                            '<div class="content">' .
+                            '<h2 class="nom">' . htmlspecialchars($rowData['nombre']) . '</h2>' .
+                            '<p class="price">$' . number_format($price, 2) . '</p>' .
+                            '<button class="btn-add-cart">🛒 Comprar</button>' .
+                            '</div>' .
+                            '</div>';
+                    }
+                }
+                
+                echo '</div>';
+
+                mysqli_close($connection);
+                ?>
             </div>
         </div>
     </div>
@@ -175,9 +205,39 @@
             </div>
             
             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-                <div class="row container-items p-5" id="playstation-products">
-                    <div class="loading-spinner">Cargando productos...</div>
-                </div>
+                <?php
+                include('./src/php/connection.php');
+
+                $responseMySql = mysqli_query($connection, 'select * from products where categoria = "Play" limit 6');
+
+                if (!$responseMySql) {
+                    die(mysqli_error($connection));
+                }
+                
+                echo '<div class="row container-items p-5">';
+
+                if (mysqli_num_rows($responseMySql) > 0) {
+                    while ($rowData = mysqli_fetch_array($responseMySql)) {
+                        $price = floatval($rowData['precio']);
+                        if (!is_numeric($price)) {
+                            $price = 0;
+                        }
+
+                        echo '<div class="col-4 card juego">' .
+                            '<img style="width: 111%;height: 250px;border-radius: 2%;" src="' . htmlspecialchars($rowData['imagen']) . '" alt="' . htmlspecialchars($rowData['nombre']) . '">' .
+                            '<div class="content">' .
+                            '<h2 class="nom">' . htmlspecialchars($rowData['nombre']) . '</h2>' .
+                            '<p class="price">$' . number_format($price, 2) . '</p>' .
+                            '<button class="btn-add-cart">🛒 Comprar</button>' .
+                            '</div>' .
+                            '</div>';
+                    }
+                }
+                
+                echo '</div>';
+
+                mysqli_close($connection);
+                ?>
             </div>
         </div>
     </div>
@@ -206,9 +266,39 @@
             </div>
             
             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-                <div class="row container-items p-5" id="xbox-products">
-                    <div class="loading-spinner">Cargando productos...</div>
-                </div>
+                <?php
+                include('./src/php/connection.php');
+
+                $responseMySql = mysqli_query($connection, 'select * from products where categoria = "Xbox" limit 6');
+
+                if (!$responseMySql) {
+                    die(mysqli_error($connection));
+                }
+                
+                echo '<div class="row container-items p-5">';
+
+                if (mysqli_num_rows($responseMySql) > 0) {
+                    while ($rowData = mysqli_fetch_array($responseMySql)) {
+                        $price = floatval($rowData['precio']);
+                        if (!is_numeric($price)) {
+                            $price = 0;
+                        }
+
+                        echo '<div class="col-4 card juego">' .
+                            '<img style="width: 111%;height: 250px; border-radius: 2%;" src="' . htmlspecialchars($rowData['imagen']) . '" alt="' . htmlspecialchars($rowData['nombre']) . '">' .
+                            '<div class="content">' .
+                            '<h2 class="nom">' . htmlspecialchars($rowData['nombre']) . '</h2>' .
+                            '<p class="price">$' . number_format($price, 2) . '</p>' .
+                            '<button class="btn-add-cart">🛒 Comprar</button>' .
+                            '</div>' .
+                            '</div>';
+                    }
+                }
+                
+                echo '</div>';
+
+                mysqli_close($connection);
+                ?>
             </div>
         </div>
     </div>
@@ -264,109 +354,6 @@
     =================================== -->
     <script src="src/js/barra.js"></script>
     <script src="src/js/prueba.js"></script>
-
-    <!-- ===================================
-         SCRIPT PARA CARGAR PRODUCTOS DESDE JSON
-    =================================== -->
-    <script>
-        // Función para cargar productos por categoría desde JSON
-        async function loadProducts(categoria, containerId) {
-            const container = document.getElementById(containerId);
-            
-            try {
-                const response = await fetch('/data/products.json');
-                
-                if (!response.ok) {
-                    throw new Error('No se pudo cargar el archivo de productos');
-                }
-                
-                const allProducts = await response.json();
-                
-                // Filtrar por categoría y limitar a 6
-                const products = allProducts
-                    .filter(p => p.categoria === categoria)
-                    .slice(0, 6);
-                
-                // Limpiar spinner
-                container.innerHTML = '';
-                
-                if (products.length === 0) {
-                    container.innerHTML = '<p class="text-center">No hay productos disponibles</p>';
-                    return;
-                }
-                
-                // Renderizar productos
-                products.forEach(product => {
-                    const price = parseFloat(product.precio) || 0;
-                    
-                    const productCard = `
-                        <div class="col-4 card juego">
-                            <img style="width: 111%;height: 250px;border-radius: 1%;" 
-                                 src="${product.imagen}" 
-                                 alt="${product.nombre}"
-                                 onerror="this.src='src/img/default-game.png'">
-                            <div class="content">
-                                <h2 class="nom">${product.nombre}</h2>
-                                <p class="price">$${price.toFixed(2)}</p>
-                                <button class="btn-add-cart">🛒 Comprar</button>
-                            </div>
-                        </div>
-                    `;
-                    
-                    container.innerHTML += productCard;
-                });
-                
-            } catch (error) {
-                console.error(`Error cargando ${categoria}:`, error);
-                container.innerHTML = '<p class="text-center text-danger">Error al cargar productos. Por favor intenta más tarde.</p>';
-            }
-        }
-
-        // Cargar productos cuando la página esté lista
-        document.addEventListener('DOMContentLoaded', function() {
-            loadProducts('Nintendo', 'nintendo-products');
-            loadProducts('Play', 'playstation-products');
-            loadProducts('Xbox', 'xbox-products');
-        });
-
-        // Búsqueda de productos
-        document.getElementById('searchButton')?.addEventListener('click', async function() {
-            const searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
-            
-            if (!searchQuery) {
-                alert('Por favor escribe algo para buscar');
-                return;
-            }
-            
-            try {
-                const response = await fetch('/data/products.json');
-                const allProducts = await response.json();
-                
-                const results = allProducts.filter(product => 
-                    product.nombre.toLowerCase().includes(searchQuery)
-                );
-                
-                if (results.length > 0) {
-                    console.log('Resultados encontrados:', results);
-                    alert(`Se encontraron ${results.length} resultado(s) para "${searchQuery}"`);
-                    // Aquí podrías mostrar los resultados en un modal o sección especial
-                } else {
-                    alert(`No se encontraron resultados para "${searchQuery}"`);
-                }
-                
-            } catch (error) {
-                console.error('Error en búsqueda:', error);
-                alert('Error al buscar productos');
-            }
-        });
-
-        // Permitir buscar con Enter
-        document.getElementById('searchInput')?.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                document.getElementById('searchButton').click();
-            }
-        });
-    </script>
 </body>
 
 </html>
