@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/Hover-master/css/hover.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    
+    <header>
+            <div class="logo">
+                <a href="Index.php"><img src="src/img/Recurso 1.png" alt="" id="logotipo"></a>
+            </div>
+            
+                <input type="text" id="searchInput" placeholder=" Buscar juego">
+                <button id="searchButton" class="hvr-push"> Buscar</button>
+            
+            <div class="container-icon">
+                <!-- Carrito de compras -->
+                <div class="container-cart-icon">
+                    <!-- Icono del carrito -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="icon-cart">
+                        <!-- Representación visual del carrito -->
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                    </svg>
+                    <!-- Contador de productos en el carrito -->
+                    <div class="count-products">
+                        <span id="contador-productos">0</span>
+                    </div>
+                </div>
+                <!-- Lista de productos en el carrito -->
+                <div class="container-cart-products hidden-cart">
+                    <!-- Detalles de los productos agregados -->
+                    <div class="row-product hidden">
+                        <div class="cart-product">
+                            <div class="info-cart-product">
+                                <span class="cantidad-producto-carrito">1</span>
+                                <p class="titulo-producto-carrito">Zapatos Nike</p>
+                                <span class="precio-producto-carrito">$80</span>
+                            </div>
+                            <!-- Icono para eliminar un producto del carrito -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="icon-close">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Total a pagar por los productos en el carrito -->
+                    <div class="cart-total hidden">
+                        <h3>Total:</h3>
+                        <span class="total-pagar">$200</span>
+                        <!-- borrar carrito -->
+                        <button id="btnVaciarCarrito">Vaciar Carrito</button>
+
+                        <!-- Agregar el botón con un ID específico para poder seleccionarlo en JavaScript -->
+                        <a onclick="enviar" id="btnenviar"
+                            href="https://wa.me/528711646010?text=%20Quiero%20comprar%20Juego" target="_blank">Enviar
+                            mensaje</a>
+                    </div>
+                    <!-- Mensaje en caso de que el carrito esté vacío -->
+                    <p class="cart-empty">El carrito está vacío</p>
+                </div>
+            </div>
+
+        </header>
+    </div>
+    <!-- NAqui empieza el navbar -->
+    <div class="container-fluid banner">
+        <!-- Primera parte -->
+        <div class="content-wrapper">
+            <div class="content-desc">
+                <h1>Videojuegos</h1>
+                <p>Compra algunos juegos <span>en oferta</span> en la mejor pagina, somos expertos en añadir diversion a
+                    tu vida</p>
+                <p>La mayoria de tus amigos compran sus juegos aqui mismo al igual que ellos adorna tu vida con las
+                    ofertas de SmithJaggerGames
+                    presiona el boton para ver algunas ofertas</p>
+                <button id="btn2" type="button" class="hvr-buzz-out"><a class="enlace" href="#ofertas">Ofertas por
+                        inauguracion</a></button>
+
+
+
+
+
+            </div>
+
+            <div class="divmario">
+                <img src="src/img/Mario2.gif" alt="">
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+    <!-- 2da parte -->
+    <div class="section-JR">
+        <h1>Nintendo</h1>
+    </div>
+
+    <div class="container-fluid section-1">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 caroucel">
+                <div class="carousel">
+                    <div class="slide">
+                        <img src="https://i.3djuegos.com/juegos/8298/fortnite/fotos/ficha/fortnite-5154590.jpg"
+                            alt="Imagen 1">
+                    </div>
+                    <div class="slide">
+                        <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000964/811461b8d1cacf1f2da791b478dccfe2a55457780364c3d5a95fbfcdd4c3086f"
+                            alt="Imagen 2">
+                    </div>
+                    <div class="slide">
+                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202106/0117/I558OkMNBieAq24dzWwjjE4K.png"
+                            alt="Imagen 3">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                    <?php
+                    include('./src/php/connection.php');
+
+                    $responseMySql = mysqli_query($connection, 'select * from products where categoria = "Nintendo" limit 6');
+
+                    if (!$responseMySql) {
+                        die(mysqli_error($connection));
+                    }
+                    echo '
+                        <div class="row container-items p-5">';
+
+                    if (mysqli_num_rows($responseMySql) > 0) {
+                        while ($rowData = mysqli_fetch_array($responseMySql)) {
+                            // Obtener el precio del producto y asegurarnos de que sea un número válido
+                            $price = floatval($rowData['precio']);
+                            if (!is_numeric($price)) {
+                                // Si el precio no es un número válido, asignar un valor predeterminado
+                                $price = 0;
+                            }
+
+                            echo '<div class="col-4 card juego">' .
+                                '<img style="width: 110%" src="' . $rowData['imagen'] . '" alt="imagen">' .
+                                '<div class="content">' .
+                                '<h2 class="nom" >' . $rowData['nombre'] . '</h2>' .
+                                '<p class="price">$' . $price . '</p>' .
+                                '<button id="comprar" class="btn-add-cart">Comprar</button>' .
+                                '</div>' .
+                                '</div>';
+                        }
+                    }
+                    echo '</div>';
+
+                    mysqli_close($connection);
+                    ?>
+                </div>
+        </div>
+    </div>
+
+    <div class="section-JR">
+        <h1>PlayStation</h1>
+    </div>
+
+    <div class="container-fluid section-1">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 caroucel">
+                <div class="carousel">
+                    <div class="slide">
+                        <img src="https://i.3djuegos.com/juegos/8298/fortnite/fotos/ficha/fortnite-5154590.jpg"
+                            alt="Imagen 1">
+                    </div>
+                    <div class="slide">
+                        <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000964/811461b8d1cacf1f2da791b478dccfe2a55457780364c3d5a95fbfcdd4c3086f"
+                            alt="Imagen 2">
+                    </div>
+                    <div class="slide">
+                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202106/0117/I558OkMNBieAq24dzWwjjE4K.png"
+                            alt="Imagen 3">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+            <?php
+                    include('./src/php/connection.php');
+
+                    $responseMySql = mysqli_query($connection, 'select * from products where categoria = "Play" limit 6');
+
+                    if (!$responseMySql) {
+                        die(mysqli_error($connection));
+                    }
+                    echo '
+                        <div class="row container-items p-5">';
+
+                    if (mysqli_num_rows($responseMySql) > 0) {
+                        while ($rowData = mysqli_fetch_array($responseMySql)) {
+                            // Obtener el precio del producto y asegurarnos de que sea un número válido
+                            $price = floatval($rowData['precio']);
+                            if (!is_numeric($price)) {
+                                // Si el precio no es un número válido, asignar un valor predeterminado
+                                $price = 0;
+                            }
+
+                            echo '<div class="col-4 card juego">' .
+                                '<img style="width: 110%" src="' . $rowData['imagen'] . '" alt="imagen">' .
+                                '<div class="content">' .
+                                '<h2 class="nom" >' . $rowData['nombre'] . '</h2>' .
+                                '<p class="price">$' . $price . '</p>' .
+                                '<button id="comprar" class="btn-add-cart">Comprar</button>' .
+                                '</div>' .
+                                '</div>';
+                        }
+                    }
+                    echo '</div>';
+
+                    mysqli_close($connection);
+                    ?>
+                </div>
+        </div>
+    </div>
+
+    <div class="section-JR">
+        <h1>Xbox</h1>
+    </div>
+
+    <div class="container-fluid section-1">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 caroucel">
+                <div class="carousel">
+                    <div class="slide">
+                        <img src="https://i.3djuegos.com/juegos/8298/fortnite/fotos/ficha/fortnite-5154590.jpg"
+                            alt="Imagen 1">
+                    </div>
+                    <div class="slide">
+                        <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000964/811461b8d1cacf1f2da791b478dccfe2a55457780364c3d5a95fbfcdd4c3086f"
+                            alt="Imagen 2">
+                    </div>
+                    <div class="slide">
+                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202106/0117/I558OkMNBieAq24dzWwjjE4K.png"
+                            alt="Imagen 3">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+            <?php
+                    include('./src/php/connection.php');
+
+                    $responseMySql = mysqli_query($connection, 'select * from products where categoria = "Xbox" limit 6');
+
+                    if (!$responseMySql) {
+                        die(mysqli_error($connection));
+                    }
+                    echo '
+                        <div class="row container-items p-5">';
+
+                    if (mysqli_num_rows($responseMySql) > 0) {
+                        while ($rowData = mysqli_fetch_array($responseMySql)) {
+                            // Obtener el precio del producto y asegurarnos de que sea un número válido
+                            $price = floatval($rowData['precio']);
+                            if (!is_numeric($price)) {
+                                // Si el precio no es un número válido, asignar un valor predeterminado
+                                $price = 0;
+                            }
+
+                            echo '<div class="col-4 card juego">' .
+                                '<img style="width: 110%" src="' . $rowData['imagen'] . '" alt="imagen">' .
+                                '<div class="content">' .
+                                '<h2 class="nom" >' . $rowData['nombre'] . '</h2>' .
+                                '<p class="price">$' . $price . '</p>' .
+                                '<button id="comprar" class="btn-add-cart">Comprar</button>' .
+                                '</div>' .
+                                '</div>';
+                        }
+                    }
+                    echo '</div>';
+
+                    mysqli_close($connection);
+                    ?>
+                </div>
+        </div>
+    </div>
+
+    
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-body">
+            <div class="logo footer-logo">
+                <i class="fas fa-gamepad"></i>
+                <h1>SmithJagger GAMES</h1>
+            </div>
+            <ul>
+                <h3>Links de Juegos</h3>
+                <li><a href="#">Mario Party</a></li>
+                <li><a href="#">War Zone</a></li>
+                <li><a href="#">Fifa</a></li>
+                <li><a href="#">Mario Kart</a></li>
+            </ul>
+
+            <ul>
+                <h3>Desarrolladores</h3>
+                <li><a href="#">Eduardo Jara</a></li>
+                <li><a href="#">Martin </a></li>
+                <li><a href="#">Natalia Ramirez</a></li>
+                <li><a href="#">Angel Santos</a></li>
+            </ul>
+            <ul>
+                <h3>Contactanos</h3>
+                <li><a href="https://www.facebook.com/profile.php?id=100094551206794" href=><i
+                            class="fab fa-facebook"></i>Facebook</a></li>
+                <li><a href="https://instagram.com/smithjaggergames?igshid=NGExMmI2YTkyZg=="><i
+                            class="fab fa-instagram"></i>Instagram</a></li>
+                <li><a href="https://twitter.com/jagger_games"><i class="fab fa-twitter"></i>Twitter</a></li>
+                <li><a href="https://wa.me/528711646010"><i class="fab fa-linkedin"></i>Whatsapp</a></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>Copyrihgt SmithJaggerGames<span>Desarrolladores</span> 2023</p>
+    </div>
+
+
+
+
+
+
+    <script src="src/js/barra.js"></script>
+    <script src="./src/js/principal.js"></script>
+</body>
+
+</html>
+
+este es mi index y el js es el siguiente
+
+// Seleccionar el botón del carrito y el contenedor de productos del carrito
+const btnCart = document.querySelector('.container-cart-icon');
+const containerCartProducts = document.querySelector('.container-cart-products');
+
+// Agregar un evento para mostrar u ocultar el contenedor de productos del carrito al hacer clic en el botón del carrito
+btnCart.addEventListener('click', () => {
+  containerCartProducts.classList.toggle('hidden-cart');
+});
+
+// Seleccionar elementos relacionados con el carrito
+const cartInfo = document.querySelector('.cart-product');
+const rowProduct = document.querySelector('.row-product');
+const productsList = document.querySelector('.container-items'); // Lista de todos los contenedores de productos
+let allProducts = []; // Variable que almacenará los productos seleccionados en el carrito
+const valorTotal = document.querySelector('.total-pagar'); // Mostrará el valor total a pagar
+const countProducts = document.querySelector('#contador-productos'); // Mostrará la cantidad total de productos en el carrito
+const cartEmpty = document.querySelector('.cart-empty'); // Mensaje de "Carrito Vacío"
+const cartTotal = document.querySelector('.cart-total'); // Contenedor del resumen total del carrito
+
+// Función para mostrar los productos en el carrito en la página web
+const showHTML = () => {
+  // Mostrar el mensaje de "Carrito Vacío" y ocultar el resumen del carrito si no hay productos en el carrito
+  if (!allProducts.length) {
+    cartEmpty.classList.remove('hidden');
+    rowProduct.classList.add('hidden');
+    cartTotal.classList.add('hidden');
+  } else {
+    // Ocultar el mensaje de "Carrito Vacío" y mostrar el resumen del carrito si hay productos en el carrito
+    cartEmpty.classList.add('hidden');
+    rowProduct.classList.remove('hidden');
+    cartTotal.classList.remove('hidden');
+  }
+
+  // Limpiar los productos existentes en el carrito para actualizar la lista
+  rowProduct.innerHTML = '';
+
+  let total = 0;
+  let totalOfProducts = 0;
+
+  // Iterar sobre todos los productos en el carrito para mostrarlos en la página web
+  allProducts.forEach(product => {
+    const containerProduct = document.createElement('div');
+    containerProduct.classList.add('cart-product');
+
+    // Crear el HTML para mostrar la información del producto en el carrito
+    containerProduct.innerHTML = `
+      <div class="info-cart-product">
+          <span class="cantidad-producto-carrito">${product.quantity}</span>
+          <p class="titulo-producto-carrito">${product.title}</p>
+          <span class="precio-producto-carrito">${product.price}</span>
+      </div>
+      <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon-close"
+      >
+          <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+          />
+      </svg>
+    `;
+
+    // Agregar el producto al carrito en la página web
+    rowProduct.append(containerProduct);
+
+    total += product.quantity * product.price;
+    totalOfProducts += product.quantity;
+  });
+
+  // Actualizar el valor total a pagar y la cantidad total de productos en el carrito
+  valorTotal.innerText = `$${total}`;
+  countProducts.innerText = totalOfProducts;
+
+  // Actualizar el enlace del botón de WhatsApp
+  actualizarEnlaceWhatsApp();
+};
+
+// Agregar un evento al contenedor de productos para detectar clics en botones "Agregar al Carrito"
+productsList.addEventListener('click', e => {
+  if (e.target.classList.contains('btn-add-cart')) {
+    // Obtener la información del producto seleccionado
+    const product = e.target.parentElement;
+    const infoProduct = {
+      quantity: 1,
+      title: product.querySelector('h2').textContent,
+      price: parseFloat(product.querySelector('p').textContent.slice(1)),
+    };
+
+    // Comprobar si el producto ya existe en el carrito
+    const exists = allProducts.some(product => product.title === infoProduct.title);
+
+    // Si el producto ya existe, actualizar la cantidad; de lo contrario, agregarlo al arreglo
+    if (exists) {
+      const products = allProducts.map(product => {
+        if (product.title === infoProduct.title) {
+          product.quantity++;
+          return product;
+        } else {
+          return product;
+        }
+      });
+      allProducts = [...products];
+    } else {
+      allProducts = [...allProducts, infoProduct];
+    }
+
+    // Mostrar los productos actualizados en el carrito
+    showHTML();
+  }
+});
+
+// Agregar un evento al contenedor de productos del carrito para detectar clics en los botones de eliminar productos
+rowProduct.addEventListener('click', e => {
+  if (e.target.classList.contains('icon-close')) {
+    // Obtener el producto que se desea eliminar del carrito
+    const product = e.target.parentElement;
+    const title = product.querySelector('p').textContent;
+
+    // Filtrar el producto del arreglo de productos del carrito
+    allProducts = allProducts.filter(product => product.title !== title);
+
+    // Mostrar los productos actualizados en el carrito
+    showHTML();
+  }
+});
+
+// Función para generar el mensaje para WhatsApp con el contenido del carrito
+function generarMensaje() {
+  const baseURL = 'https://wa.me/528711646010?text=';
+  const productos = allProducts.map(product => {
+    const { quantity, title, price } = product;
+    return `${quantity} Copias de juego ${title} - y su precio es $${product.price * quantity}`;
+  });
+
+  const mensajeCarrito = productos.join('%0A');
+
+  const total = allProducts.reduce((acc, product) => acc + product.price * product.quantity, 0);
+  const mensaje = `${baseURL}%20Hola%20quisiera%20comprar%20estos%20juegos%20y%20el%20total%20sería%20$${total}%0A%0A${mensajeCarrito}`;
+  return mensaje;
+}
+
+// Función para actualizar el enlace del botón de WhatsApp con el mensaje generado
+function actualizarEnlaceWhatsApp() {
+  const btnenviar = document.querySelector('#btnenviar');
+  btnenviar.href = generarMensaje();
+}
+
+// Función para borrar todo el contenido del carrito
+function borrarCarrito() {
+  // Vaciar el arreglo que almacena los productos seleccionados en el carrito
+  allProducts = [];
+
+  // Mostrar el carrito vacío en la página web
+  showHTML();
+
+  // Actualizar el enlace del botón de WhatsApp
+  actualizarEnlaceWhatsApp();
+}
+
+// Agregar un evento al botón de "Vaciar Carrito" para borrar todo el contenido del carrito al hacer clic
+const btnVaciarCarrito = document.querySelector('#btnVaciarCarrito');
+btnVaciarCarrito.addEventListener('click', borrarCarrito);
+
+
+
+lo que pasa es que no me agrega al carrito el php del playstation y el de xbox, pero el de nintendo si lo agarra, puedes modificarlo 
+para que me agarre el boton de play y xbox y se vea reflejado al carrito  
